@@ -1,10 +1,10 @@
-PORT ?= 8000
+PORT ?= 8080
 
 start: start-server
 setup: install install-env
 
 start-server:
-	 php artisan serve --port=$(PORT)
+	 php artisan serve --host 0.0.0.0 --port=$(PORT)
 
 install:
 	composer install
