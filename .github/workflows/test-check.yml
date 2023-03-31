@@ -26,9 +26,9 @@ jobs:
                   # Specify the PHP version
                   php-version: '8.0.1'
 
-            - name: Install
-                # Install project
-              run: make install
+            - name: Setup
+                # Setup project
+              run: make setup
 
             - name: Run test
               run: make test
