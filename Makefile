@@ -1,15 +1,14 @@
 PORT ?= 8080
 
-start: start-server
-setup: install-composer install-env generate-app-key
+setup: install-env composer-install generate-app-key
 
-start-server:
+start:
 	 php artisan serve --host 0.0.0.0 --port=$(PORT)
 
-install-composer:
+composer-install:
 	composer install
 
-validate:
+composer-validate:
 	composer validate
 
 lint:
@@ -25,4 +24,4 @@ install-env:
 	php -r "file_exists('.env') || copy('.env.example', '.env');"
 
 generate-app-key:
-	php artisan key:generate
+	php artisan key:generate --ansi
