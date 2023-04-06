@@ -1,11 +1,11 @@
 PORT ?= 8080
 
-setup: install-env composer-install generate-app-key
+setup: install-env install-deps generate-app-key build-assets
 
 start:
 	 php artisan serve --host 0.0.0.0 --port=$(PORT)
 
-composer-install:
+install-deps:
 	composer install
 
 composer-validate:
@@ -25,3 +25,7 @@ install-env:
 
 generate-app-key:
 	php artisan key:generate --ansi
+
+build-assets:
+	npm ci
+	npm run build
