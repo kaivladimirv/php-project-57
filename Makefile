@@ -29,3 +29,6 @@ generate-app-key:
 build-assets:
 	npm ci
 	npm run build
+
+migrate:
+	php artisan migrate
