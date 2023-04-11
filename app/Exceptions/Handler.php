@@ -56,9 +56,7 @@ class Handler extends ExceptionHandler
             //
         });
 
-        if (env('STOP_IGNORING', false)) {
-            $this->stopAllIgnoring();
-        }
+        $this->stopAllIgnoring();
     }
 
     private function stopAllIgnoring(): void
