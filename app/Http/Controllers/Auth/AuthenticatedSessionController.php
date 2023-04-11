@@ -19,6 +19,7 @@ class AuthenticatedSessionController extends Controller
     public function create(): View
     {
         Log::error(__METHOD__ . ': 1');
+        echo '1';
         return view('auth.login');
     }
 
