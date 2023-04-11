@@ -2,7 +2,17 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\MultipleRecordsFoundException;
+use Illuminate\Database\RecordsNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Routing\Exceptions\BackedEnumCaseNotFoundException;
+use Illuminate\Session\TokenMismatchException;
+use Illuminate\Validation\ValidationException;
+use Symfony\Component\HttpFoundation\Exception\SuspiciousOperationException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 
@@ -47,7 +57,28 @@ class Handler extends ExceptionHandler
         });
 
         if (env('STOP_IGNORING', false)) {
-            $this->stopIgnoring(HttpException::class);
+            $this->stopAllIgnoring();
+        }
+    }
+
+    private function stopAllIgnoring(): void
+    {
+        $exceptionTypes = [
+            AuthenticationException::class,
+            AuthorizationException::class,
+            BackedEnumCaseNotFoundException::class,
+            HttpException::class,
+            HttpResponseException::class,
+            ModelNotFoundException::class,
+            MultipleRecordsFoundException::class,
+            RecordsNotFoundException::class,
+            SuspiciousOperationException::class,
+            TokenMismatchException::class,
+            ValidationException::class,
+        ];
+
+        foreach ($exceptionTypes as $exceptionType) {
+            $this->stopIgnoring($exceptionType);
         }
     }
 }
