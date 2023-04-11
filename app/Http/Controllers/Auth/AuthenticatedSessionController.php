@@ -18,6 +18,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
+        Log::error(__METHOD__ . ': 1');
         return view('auth.login');
     }
 
@@ -26,11 +27,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        Log::debug(__METHOD__ . ': 1');
+        Log::error(__METHOD__ . ': 1');
         $request->authenticate();
-        Log::debug(__METHOD__ . ': 2');
+        Log::error(__METHOD__ . ': 2');
         $request->session()->regenerate();
-        Log::debug(__METHOD__ . ': 3');
+        Log::error(__METHOD__ . ': 3');
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }
