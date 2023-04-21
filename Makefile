@@ -2,6 +2,9 @@ PORT ?= 8080
 
 setup: install-env install-deps generate-app-key build-assets
 
+start-in-dev-mode:
+	make -j 2 start run-dev
+
 start:
 	 php artisan serve --host 0.0.0.0 --port=$(PORT)
 
@@ -32,3 +35,9 @@ build-assets:
 
 migrate:
 	php artisan migrate
+
+run-dev:
+	npm run dev
+
+run-fill-db:
+	php artisan db:seed --force

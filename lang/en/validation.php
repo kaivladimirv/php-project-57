@@ -213,4 +213,8 @@ return [
         'username'                 => 'username',
         'year'                     => 'year',
     ],
+    'task_status' => [
+        'required' => 'This is a required field',
+        'unique' => 'Status with this name already exists'
+    ]
 ];

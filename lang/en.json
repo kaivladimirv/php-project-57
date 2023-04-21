@@ -73,5 +73,14 @@
     "Reset password": "Reset password",
     "Hello from Hexlet!" : "Hello from Hexlet!",
     "This is a simple task manager in Laravel": "This is a simple task manager in Laravel",
-    "Press me": "Press me"
+    "Press me": "Press me",
+    "ID": "ID",
+    "Statuses": "Statuses",
+    "Date of creation": "Date of creation",
+    "Actions": "Actions",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "Are you sure?": "Are you sure?",
+    "Create": "Create",
+    "Update": "Обновить"
 }
