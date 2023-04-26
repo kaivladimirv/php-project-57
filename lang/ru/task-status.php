@@ -8,4 +8,5 @@ return [
     'created-successfully' => 'Статус успешно создан',
     'changed-successfully' => 'Статус успешно изменён',
     'deleted-successfully' => 'Статус успешно удалён',
+    'deleted-fail-is-used' => 'Не удалось удалить статус',
 ];

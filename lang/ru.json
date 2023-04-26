@@ -82,5 +82,10 @@
     "Delete": "Удалить",
     "Are you sure?": "Вы уверены?",
     "Create": "Создать",
-    "Update": "Обновить"
+    "Update": "Обновить",
+    "Tasks": "Задачи",
+    "Status": "Статус",
+    "Author": "Автор",
+    "Executor": "Исполнитель",
+    "Description": "Описание"
 }

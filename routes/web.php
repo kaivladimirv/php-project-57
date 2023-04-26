@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Task\TaskController;
 use App\Http\Controllers\Task\TaskStatusController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('task_statuses', TaskStatusController::class);
+Route::resource('tasks', TaskController::class);
 
 require __DIR__.'/auth.php';

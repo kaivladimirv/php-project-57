@@ -216,5 +216,8 @@ return [
     'task_status' => [
         'required' => 'This is a required field',
         'unique' => 'Status with this name already exists'
+    ],
+    'task' => [
+        'required' => 'This is a required field'
     ]
 ];
