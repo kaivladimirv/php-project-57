@@ -22,14 +22,14 @@ class TaskStatusController extends Controller
     {
         $taskStatuses = TaskStatus::all()->sortBy('id');
 
-        return view('task.status.index', compact('taskStatuses'));
+        return view('task_statuses.index', compact('taskStatuses'));
     }
 
     public function create(): View
     {
         $taskStatus = new TaskStatus();
 
-        return view('task.status.create', compact('taskStatus'));
+        return view('task_statuses.create', compact('taskStatus'));
     }
 
     public function store(StoreTaskStatusRequest $request): RedirectResponse
@@ -45,7 +45,7 @@ class TaskStatusController extends Controller
 
     public function edit(TaskStatus $taskStatus): View
     {
-        return view('task.status.edit', compact('taskStatus'));
+        return view('task_statuses.edit', compact('taskStatus'));
     }
 
     public function update(UpdateTaskStatusRequest $request, TaskStatus $taskStatus): RedirectResponse
