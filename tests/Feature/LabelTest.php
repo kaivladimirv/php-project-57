@@ -14,7 +14,7 @@ class LabelTest extends TestCase
     use RefreshDatabase;
 
     private string $tableName;
-    private array  $formData;
+    private array $formData;
 
     protected function setUp(): void
     {
