@@ -28,11 +28,15 @@ class StoreTaskRequest extends FormRequest
                 'required',
                 'max:100',
             ],
-            'description'    => [],
+            'description'    => ['nullable'],
             'status_id'      => [
                 'required',
             ],
-            'assigned_to_id' => [],
+            'assigned_to_id' => ['nullable'],
+            'labels'         => [
+                'array',
+                'nullable',
+            ],
         ];
     }
 

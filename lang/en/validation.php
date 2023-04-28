@@ -219,5 +219,9 @@ return [
     ],
     'task' => [
         'required' => 'This is a required field'
+    ],
+    'label' => [
+        'required' => 'This is a required field',
+        'unique' => 'Label with this name already exists'
     ]
 ];

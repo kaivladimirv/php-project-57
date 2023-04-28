@@ -87,5 +87,6 @@
     "Status": "Status",
     "Author": "Author",
     "Executor": "Executor",
-    "Description": "Описание"
+    "Description": "Описание",
+    "Labels": "Labels"
 }

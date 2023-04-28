@@ -30,4 +30,12 @@
         {{ Form::select('assigned_to_id', $executors->prepend('----------', null), null, ['class' => 'rounded border-gray-300 w-1/3']) }}
         <x-input-error :messages="$errors->get('assigned_to_id')" />
     </div>
+
+    <div class="mt-2">
+        {{ Form::label('labels', __('Labels')) }}
+    </div>
+    <div>
+        {{ Form::select('labels[]', $labels->prepend('', null), null, ['class' => 'rounded border-gray-300 w-1/3 h-32', 'multiple' => 'multiple', 'id' => 'labels']) }}
+        <x-input-error :messages="$errors->get('labels')" />
+    </div>
 </div>
