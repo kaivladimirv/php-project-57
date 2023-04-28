@@ -88,5 +88,6 @@
     "Author": "Author",
     "Executor": "Executor",
     "Description": "Описание",
-    "Labels": "Labels"
+    "Labels": "Labels",
+    "Apply": "Apply"
 }

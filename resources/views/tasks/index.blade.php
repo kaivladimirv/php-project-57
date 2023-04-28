@@ -10,12 +10,31 @@
                 <h1 class="mb-5">{{ __('Tasks') }}</h1>
 
                 <div class="w-full flex items-center">
-                    @can('create', \App\Models\Task::class)
-                    <div class="ml-auto">
-                        <x-primary-hyperlink-button :href="route('tasks.create')">
-                            {{ __('task.create-task') }}
-                        </x-primary-hyperlink-button>
+                    <div>
+                        {{ Form::open(['route' => 'tasks.index', 'method' => 'GET']) }}
+                        <form method="GET" action="{{ route('tasks.index') }}">
+                            <div class="flex">
+                                <div>
+                                    {{ Form::select('', $taskStatuses->prepend(__('Status'), null), request()->input('filter.status_id'), ['class' => 'rounded border-gray-300', 'name' => 'filter[status_id]']) }}
+                                </div>
+                                <div>
+                                    {{ Form::select('', $users->prepend(__('Author'), null), request()->input('filter.created_by_id'), ['class' => 'rounded border-gray-300 ml-2', 'name' => 'filter[created_by_id]']) }}
+                                </div>
+                                <div>
+                                    {{ Form::select('', $users->prepend(__('Executor'), null), request()->input('filter.assigned_to_id'), ['class' => 'rounded border-gray-300 ml-2', 'name' => 'filter[assigned_to_id]']) }}
+                                </div>
+                                <div>
+                                    <x-primary-submit-button class="ml-2">{{__('Apply') }}</x-primary-submit-button>
+                                </div>
+                            </div>
+                        {{ Form::close() }}
                     </div>
+                    @can('create', \App\Models\Task::class)
+                        <div class="ml-auto">
+                            <x-primary-hyperlink-button :href="route('tasks.create')">
+                                {{ __('task.create-task') }}
+                            </x-primary-hyperlink-button>
+                        </div>
                     @endcan
                 </div>
 
@@ -38,7 +57,8 @@
                         <tr class="border-b border-dashed text-left">
                             <td>{{ $task->id }}</td>
                             <td>{{ $task->status->name }}</td>
-                            <td><a class="text-blue-600 hover:text-blue-900" href="{{ route('tasks.show', $task) }}">{{ $task->name }}</a></td>
+                            <td><a class="text-blue-600 hover:text-blue-900"
+                                   href="{{ route('tasks.show', $task) }}">{{ $task->name }}</a></td>
                             <td>{{ $task->creator->name }}</td>
                             <td>{{ $task->executor->name ?? '' }}</td>
                             <td>{{ $task->created_at->format('d.m.Y') }}</td>

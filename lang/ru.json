@@ -88,5 +88,6 @@
     "Author": "Автор",
     "Executor": "Исполнитель",
     "Description": "Описание",
-    "Labels": "Метки"
+    "Labels": "Метки",
+    "Apply": "Применить"
 }
