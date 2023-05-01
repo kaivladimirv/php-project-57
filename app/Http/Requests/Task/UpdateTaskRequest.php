@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\Task;
 
+use App\Models\Task;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateTaskRequest extends FormRequest
 {
@@ -21,10 +23,13 @@ class UpdateTaskRequest extends FormRequest
      */
     public function rules(): array
     {
+        $taskId = $this->route('task')->id;
+
         return [
             'name'           => [
                 'required',
                 'max:100',
+                Rule::unique(Task::class)->ignore($taskId),
             ],
             'description'    => ['nullable'],
             'status_id'      => [
@@ -42,6 +47,7 @@ class UpdateTaskRequest extends FormRequest
     {
         return [
             'name.required'      => trans('validation.task.required'),
+            'name.unique'        => trans('validation.task.unique'),
             'status_id.required' => trans('validation.task.required'),
         ];
     }

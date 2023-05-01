@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\Task;
 
+use App\Models\Task;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreTaskRequest extends FormRequest
@@ -27,6 +28,7 @@ class StoreTaskRequest extends FormRequest
             'name'           => [
                 'required',
                 'max:100',
+                'unique:' . Task::class,
             ],
             'description'    => ['nullable'],
             'status_id'      => [
@@ -44,6 +46,7 @@ class StoreTaskRequest extends FormRequest
     {
         return [
             'name.required'      => trans('validation.task.required'),
+            'name.unique'        => trans('validation.task.unique'),
             'status_id.required' => trans('validation.task.required'),
         ];
     }

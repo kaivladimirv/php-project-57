@@ -218,7 +218,8 @@ return [
         'unique' => 'Status with this name already exists'
     ],
     'task' => [
-        'required' => 'This is a required field'
+        'required' => 'This is a required field',
+        'unique' => 'Task with this name already exists'
     ],
     'label' => [
         'required' => 'This is a required field',
