@@ -1,6 +1,7 @@
 PORT ?= 8080
 
-setup: install-env install-deps generate-app-key build-assets
+setup: install-env install-deps build-assets generate-app-key migrate run-fill-db
+setup-prod: install-deps build-assets generate-app-key migrate run-fill-db
 
 start-in-dev-mode:
 	make -j 2 start run-dev
@@ -34,7 +35,7 @@ build-assets:
 	npm run build
 
 migrate:
-	php artisan migrate
+	php artisan migrate --force
 
 run-dev:
 	npm run dev

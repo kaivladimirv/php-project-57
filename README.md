@@ -18,6 +18,17 @@ See demo: https://php-project-57-production-1229.up.railway.app/
 * PHP 8.1+
 * Composer
 
+## Installation
+```
+$ git clone https://github.com/kaivladimirv/php-project-57.git
+
+$ cd php-project-57
+
+$ make setup
+
+$ make start
+```
+
 ## License
 The Task manager project is licensed for use under the MIT License (MIT).
 Please see [LICENSE](/LICENSE) for more information.
