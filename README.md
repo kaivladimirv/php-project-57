@@ -15,5 +15,5 @@ It is a project of PHP courses from the [Hexlet](https://hexlet.io/) educational
 See demo: https://php-project-57-production-1229.up.railway.app/
 
 ## Requirements
-* PHP 8.0+
+* PHP 8.1+
 * Composer
