@@ -20,13 +20,14 @@ class UpdateTaskStatusRequest extends FormRequest
 
     public function rules(): array
     {
-        $taskStatusId = $this->route('task_status')->id;
+        /** @var TaskStatus $taskStatus */
+        $taskStatus = $this->route('task_status');
 
         return [
             'name' => [
                 'required',
                 'max:50',
-                Rule::unique(TaskStatus::class)->ignore($taskStatusId),
+                Rule::unique(TaskStatus::class)->ignore($taskStatus->id),
             ],
         ];
     }

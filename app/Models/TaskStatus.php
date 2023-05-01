@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @method static firstOrCreate(string[] $array)
+ * @property int $id
  */
 class TaskStatus extends Model
 {
