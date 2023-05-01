@@ -19,7 +19,7 @@ lint:
 	composer exec --verbose phpcs -- --standard=PSR12 app tests
 
 test:
-	php artisan test
+	php artisan test --testsuite=Feature
 
 test-coverage:
 	composer exec --verbose phpunit tests -- --coverage-clover build/logs/clover.xml
