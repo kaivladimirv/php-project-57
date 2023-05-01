@@ -20,13 +20,14 @@ class UpdateLabelRequest extends FormRequest
 
     public function rules(): array
     {
-        $labelId = $this->route('label')->id;
+        /** @var Label $label */
+        $label = $this->route('label');
 
         return [
             'name'        => [
                 'required',
                 'max:50',
-                Rule::unique(Label::class)->ignore($labelId),
+                Rule::unique(Label::class)->ignore($label->id),
             ],
             'description' => ['nullable'],
         ];
