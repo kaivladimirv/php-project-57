@@ -1,17 +1,17 @@
-<div class="flex flex-col">
+<div class="flex flex-col md:w-1/2">
     <div class="mt-2">
-        {{ Form::label('name', __('Name')) }}
+        <x-input-label for="name" :value="__('Name')" />
     </div>
     <div>
-        {{ Form::text('name', null, ['class' => 'rounded border-gray-300 w-1/3']) }}
+        <x-text-input id="name" name="name" type="text" :value="old('name', $label->name)" autofocus />
         <x-input-error :messages="$errors->get('name')" />
     </div>
 
     <div class="mt-2">
-        {{ Form::label('description', __('Description')) }}
+        <x-input-label for="description" :value="__('Description')" />
     </div>
     <div>
-        {{ Form::textarea('description', null, ['class' => 'rounded border-gray-300 w-1/3 h-32', 'cols' => 50, 'rows' => 10]) }}
+        <x-textarea id="description" class="h-32" name="description" cols=50 rows="50" :value="old('description', $label->description)" />
         <x-input-error :messages="$errors->get('description')" />
     </div>
 </div>
