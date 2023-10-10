@@ -4,6 +4,7 @@
 [![test](https://github.com/kaivladimirv/php-project-57/actions/workflows/test-check.yml/badge.svg)](https://github.com/kaivladimirv/php-project-57/actions/workflows/test-check.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/51040e3c7d8434aade25/maintainability)](https://codeclimate.com/github/kaivladimirv/php-project-57/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/51040e3c7d8434aade25/test_coverage)](https://codeclimate.com/github/kaivladimirv/php-project-57/test_coverage)
+[![sast](https://github.com/kaivladimirv/php-project-57/actions/workflows/sast-semgrep.yml/badge.svg)](https://github.com/kaivladimirv/php-project-57/actions/workflows/sast-semgrep.yml)
 <a href="https://php.net"><img src="https://img.shields.io/badge/php-8.1%2B-%238892BF" alt="PHP Programming Language"></a>
 
 ## Task manager
