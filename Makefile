@@ -42,3 +42,6 @@ run-dev:
 
 run-fill-db:
 	php artisan db:seed --force
+
+semgrep-offline:
+	semgrep scan --config auto --severity ERROR --use-git-ignore --error
