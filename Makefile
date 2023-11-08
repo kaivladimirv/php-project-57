@@ -15,6 +15,12 @@ install-deps:
 composer-validate:
 	composer validate
 
+composer-outdated:
+	composer outdated --direct --major-only --strict
+
+composer-unused:
+	vendor/bin/composer-unused
+
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 app tests
 
