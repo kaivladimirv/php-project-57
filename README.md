@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/kaivladimirv/php-project-57/workflows/hexlet-check/badge.svg)](https://github.com/kaivladimirv/php-project-57/actions)
-[![php linter](https://github.com/kaivladimirv/php-project-57/actions/workflows/linter-check.yml/badge.svg)](https://github.com/kaivladimirv/php-project-57/actions/workflows/linter-check.yml)
+[![code style](https://github.com/kaivladimirv/php-project-57/actions/workflows/code-style-check.yml/badge.svg)](https://github.com/kaivladimirv/php-project-57/actions/workflows/code-style-check.yml)
 [![type coverage](https://shepherd.dev/github/kaivladimirv/php-project-57/coverage.svg)](https://shepherd.dev/github/kaivladimirv/php-project-57)
 [![psalm level](https://shepherd.dev/github/kaivladimirv/php-project-57/level.svg)](https://psalm.dev/)
 [![test](https://github.com/kaivladimirv/php-project-57/actions/workflows/test-check.yml/badge.svg)](https://github.com/kaivladimirv/php-project-57/actions/workflows/test-check.yml)
