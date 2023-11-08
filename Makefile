@@ -51,3 +51,6 @@ run-fill-db:
 
 semgrep-offline:
 	semgrep scan --config auto --severity ERROR --use-git-ignore --error
+
+psalm:
+	vendor/bin/psalm
