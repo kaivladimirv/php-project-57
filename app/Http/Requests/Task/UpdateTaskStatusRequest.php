@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\Task;
 
+use Override;
 use App\Models\TaskStatus;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -32,6 +33,7 @@ class UpdateTaskStatusRequest extends FormRequest
         ];
     }
 
+    #[Override]
     public function messages(): array
     {
         return [

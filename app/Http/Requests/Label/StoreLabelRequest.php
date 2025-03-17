@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\Label;
 
+use Override;
 use App\Models\Label;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -29,6 +30,7 @@ class StoreLabelRequest extends FormRequest
         ];
     }
 
+    #[Override]
     public function messages(): array
     {
         return [

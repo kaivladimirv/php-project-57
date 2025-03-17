@@ -1,5 +1,6 @@
 <?php
 
+use Rollbar\Laravel\MonologHandler;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
@@ -129,7 +130,7 @@ return [
 
         'rollbar' => [
             'driver' => 'monolog',
-            'handler' => \Rollbar\Laravel\MonologHandler::class,
+            'handler' => MonologHandler::class,
             'access_token' => env('ROLLBAR_TOKEN'),
             'level' => 'debug',
         ],

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Feature;
 
+use Override;
 use App\Models\Label;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -16,6 +17,7 @@ class LabelTest extends TestCase
     private string $tableName;
     private array $formData;
 
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

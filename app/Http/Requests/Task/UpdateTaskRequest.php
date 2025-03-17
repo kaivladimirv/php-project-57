@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Task;
 
+use Override;
 use App\Models\Task;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -44,6 +45,7 @@ class UpdateTaskRequest extends FormRequest
         ];
     }
 
+    #[Override]
     public function messages(): array
     {
         return [

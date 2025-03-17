@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\Task;
 
+use Override;
+use Illuminate\Contracts\Validation\Rule;
 use App\Models\Task;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -20,7 +22,7 @@ class StoreTaskRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
+     * @return array<string, Rule|array|string>
      */
     public function rules(): array
     {
@@ -42,6 +44,7 @@ class StoreTaskRequest extends FormRequest
         ];
     }
 
+    #[Override]
     public function messages(): array
     {
         return [
