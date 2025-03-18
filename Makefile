@@ -1,13 +1,16 @@
 PORT ?= 8080
 
 setup: install-env install-deps build-assets generate-app-key migrate run-fill-db
-setup-prod: install-deps build-assets generate-app-key migrate run-fill-db
+setup-prod: install-deps-prod build-assets generate-app-key migrate run-fill-db
 
 start-in-dev-mode:
 	make -j 2 start run-dev
 
 start:
 	 php artisan serve --host 0.0.0.0 --port=$(PORT)
+
+install-deps-prod:
+	composer install --no-dev
 
 install-deps:
 	composer install
