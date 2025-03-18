@@ -7,7 +7,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/51040e3c7d8434aade25/maintainability)](https://codeclimate.com/github/kaivladimirv/php-project-57/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/51040e3c7d8434aade25/test_coverage)](https://codeclimate.com/github/kaivladimirv/php-project-57/test_coverage)
 [![sast](https://github.com/kaivladimirv/php-project-57/actions/workflows/sast-semgrep.yml/badge.svg)](https://github.com/kaivladimirv/php-project-57/actions/workflows/sast-semgrep.yml)
-<a href="https://php.net"><img src="https://img.shields.io/badge/php-8.1%2B-%238892BF" alt="PHP Programming Language"></a>
+<a href="https://php.net"><img src="https://img.shields.io/badge/php-8.4%2B-%238892BF" alt="PHP Programming Language"></a>
 
 ## Task manager
 Task Manager is a task management system similar to http://www.redmine.org/.    
@@ -19,7 +19,7 @@ It is a project of PHP courses from the [Hexlet](https://hexlet.io/) educational
 See demo: https://php-project-57-production-1229.up.railway.app/
 
 ## Requirements
-* PHP 8.1+
+* PHP 8.4+
 * Composer
 
 ## Installation
